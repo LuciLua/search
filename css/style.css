@@ -1,0 +1,137 @@
+*::before, *, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+    background-color: rgb(56, 57, 58);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.container{
+    max-width: 1000px;
+    width: 90%;
+    min-width: fit-content;
+
+    height: fit-content;
+    min-height: 20vh;
+    max-height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 2px;
+    position: relative;
+}
+
+.container:nth-child(1){
+    background-color: rgb(79, 82, 79);
+}
+.container:nth-child(2){
+    background-color: rgb(44, 46, 44);
+}
+.container:nth-child(3){
+    background-color: rgb(28, 29, 28);
+}
+
+.container:nth-child(1) input,
+.container:nth-child(2) input,
+.container:nth-child(1) button,
+.container:nth-child(2) button{
+    border: none;
+    border-radius: 3px;
+    
+    width: 50%;
+    height: 30px;
+
+    margin: 10px;
+    text-align: center;
+
+    outline: none;
+    position: relative;
+}
+
+.container:nth-child(1) button,
+.container:nth-child(2) button{
+    background-color: rgb(67, 76, 84);
+    color: #fff;
+    cursor: pointer;
+}
+.container:nth-child(1) button:hover,
+.container:nth-child(2) button:hover{
+    background-color: rgb(49, 56, 61);
+}
+.container:nth-child(1) button:active,
+.container:nth-child(2) button:active{
+    background-color: rgb(39, 44, 48);
+}
+
+.container:nth-child(3) .results{
+    width: 90%;  
+    height: 10vh;
+    
+    border: 1px solid rgb(39, 44, 48);
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow-y: scroll;
+}
+
+.container:nth-child(3) .results::-webkit-scrollbar{
+    width: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.296), #0077ff6d, rgba(0, 0, 0, 0.296))
+}
+
+.container:nth-child(2) .array{
+    width: 90%;
+    height: 20vh;
+
+    margin: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial;
+
+    border: 1px solid rgb(39, 44, 48);
+    position: relative;
+}
+
+
+.container:nth-child(2) .array p{ 
+    color: #fff;
+    background-color: #64d156af;
+
+    padding: 10px;
+}
+
+.result{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result p{
+    color: #fff;
+    font-size: 19px;
+    border: 1px solid #0077ff6d;
+    margin: 3px;
+    padding: 10px;
+}
