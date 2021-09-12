@@ -15,7 +15,29 @@ function buscarPalavrasSemelhantes(palavra, array){
 
 function add(){
     var addWord = document.getElementById('add').value
+    const array = document.getElementById('array')
     if(addWord.length != 0){
-        var array = document.getElementById('array').textContent += ', '+ addWord
+        if (array.textContent.length != 0){
+            array.textContent += ',' + addWord 
+        } else{
+            array.textContent += addWord 
+        }
+    }
+}
+
+function excluir(){
+    var array = document.getElementById('array').textContent.split(',')
+    var arrayElement = document.getElementById('array')
+    var deleteWord = document.getElementById('add').value
+
+    var index = array.indexOf(deleteWord, 1)
+    if(index > -1){
+        array.splice(index, 1)
+        arrayElement.textContent = array //atualiza
+    }
+    
+    if(deleteWord == array[0]){
+        array.splice(array[0], 1)
+        arrayElement.textContent = array //atualiza
     }
 }
