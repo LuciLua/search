@@ -9,7 +9,7 @@ main{
     width: 100%;
 
     overflow: hidden;
-    background-color: rgb(45, 139, 233);
+    background: linear-gradient(125deg, rgb(183, 237, 198), rgb(37, 255, 146));
 
     padding: 30px 0 30px 0;
 
@@ -28,7 +28,7 @@ main{
     padding: 20px;
 
     height: fit-content;
-    min-height: 30vh;
+    min-height: 10vh;
 
     display: flex;
     justify-content: center;
@@ -39,45 +39,76 @@ main{
     position: relative;
 
     border-radius: 20px;
+
+    background-color: rgba(250, 250, 250, 0.316);
+    font-family: Arial;
 }
 
-.btns{
+.container h1{
+    font-size: 20px;
+    color: #fff;
+}
+
+.container:nth-child(1) h1{
+    margin-bottom: 20px;
+}
+
+.container p{
+    font-size: 16px;
+    color: #fff;
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+
+    border: none;
+    border-radius: 4px;
+    
     display: flex;
-    background-color: #0077ff6d;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.btns{ /*add and delete*/
+    display: flex;
+    background-color: #ffffff6d;
+
+    margin-bottom: 30px;
 }
 
 .btns img{
     width: 20px;
 }
 
+.btn img{
+    width: 27px;
+}
+
 .btns button{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     width: 30px;
     height: 30px;
 
     margin: 10px;
-
-    border: none;
-    border-radius: 3px;
 }
 
-.container:nth-child(1),
-.container:nth-child(2),
-.container:nth-child(3){
-    background-color: rgba(250, 250, 250, 0.145);
+.container:nth-child(1) input{
+    width: 120px;
+    height: 30px;
+}
+
+.container:nth-child(2) input,
+.container:nth-child(2) button{
+    max-width: 350px;
+    width: 100%;
+    height: 30px;
 }
 
 .container:nth-child(1) input,
 .container:nth-child(2) input{
     border: none;
     border-radius: 3px;
-
-    width: 120px;
-    height: 30px;
     
     margin: 10px;
     text-align: center;
@@ -85,46 +116,43 @@ main{
     position: relative;
 }
 
-.container:nth-child(1) button:nth-of-type(1){
+.container:nth-child(2){
+    background-color: transparent;
+}
+
+.container:nth-child(2) .search-box{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.container:nth-child(2) input,
+.container:nth-child(2) button{
+    margin: 0;
+}
+
+.container:nth-child(1) button:nth-of-type(1){ /*add button*/
     background-color: rgb(9, 201, 96);
 }
-.container:nth-child(1) button:nth-of-type(2){
+.container:nth-child(1) button:nth-of-type(2){ /*delete button*/
     background-color: rgb(211, 62, 62);
 }
-
-.container:nth-child(2) button{
-    background-color: rgb(76, 100, 121);
-    border: none;
-
-    width: 120px;
-    height: 30px;
-
-    color: #fff;
-    cursor: pointer;
+.container:nth-child(2) .search-box button{ /* search button*/
+    background-color: rgb(57, 197, 68);
+    width: 20%; /* 20% de .search-box 100% */
+}
+.container:nth-child(2) .search-box input{ /* search input*/
+    width: 80%; /* 80% de .search-box 100% */
 }
 
 .container:nth-child(1) button:hover,
 .container:nth-child(2) button:hover{
     background-color: rgb(49, 56, 61);
-    cursor: pointer;
 }
 .container:nth-child(1) button:active,
 .container:nth-child(2) button:active{
     background-color: rgb(39, 44, 48);
-}
-
-.container:nth-child(3) .results{
-    width: 100%;  
-    min-height: 15vh;
-    height: fit-content;
-    
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    overflow-x: hidden;
 }
 
 .container:nth-child(1) .array{
@@ -140,43 +168,44 @@ main{
 
     margin-bottom: 10px;
 
-    font-family: Arial;
-
     position: relative;
 }
 
-
 .container:nth-child(1) .array p{ 
-    color: #fff;
-    background-color: #64d156af;
+    background-color: #14540caf;
+    border-radius: 4px;
 
-    padding: 10px;
+    padding: 12px;
     
     overflow-x: hidden;
     max-width: 350px;
 }
 
-.result{
+
+.container:nth-child(3) .results{
+    width: 100%;  
+    min-height: 15vh;
+    height: fit-content;
+    
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+.container:nth-child(3) .results .result{
     display: flex;
     flex-wrap: wrap;
 }
 
-.result p{
-    color: #fff;
-    font-size: 19px;
-    border: 1px solid #0077ff6d;
+.container:nth-child(3) .results .result p{
+    border-radius: 4px;
+    border: 1px solid #0aa017;
+    background-color: #0aa01688;
+
     margin: 3px;
     padding: 10px;
-}
-
-.array{
-    min-width: 50%;
-    max-width: 80%;
-}
-.array p{
-    background-color: #83ff2b52;
-    color: #fff;
-    padding: 10px;
-    font-size: 17px;
-    font-family: Arial;
 }

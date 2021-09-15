@@ -12,18 +12,21 @@
 <body>
     <main>
         <div class="container">
+            <h1>Add, delete and search things</h1>
+            <div class="btns">
+                <input type="text" name="" id="add">
+                <button class="btn" onclick="add()"><img src="img/add.svg" alt=""></button>
+                <button class="btn" onclick="excluir()"><img src="img/del.svg" alt=""></button>
+            </div>
             <div class="array">
                 <p id="array"></p>
             </div>
-            <input type="text" name="" id="add">
-            <div class="btns">
-                <button onclick="add()"><img src="img/add.svg" alt=""></button>
-                <button onclick="excluir()"><img src="img/del.svg" alt=""></button>
-            </div>
         </div>
         <div class="container">
-            <input type="text" name="" id="search" placeholder="Search here">
-            <button onclick="buscarPalavrasSemelhantes()">Search</button>
+            <div class="search-box">
+                <input type="text" name="" id="search" placeholder="Search here">
+                <button class="btn" onclick="buscarPalavrasSemelhantes()"><img src="img/search.svg" alt=""></button>
+            </div>
         </div>
         <div class="container">
             <div class="results">
