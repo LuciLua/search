@@ -84,6 +84,7 @@ main{
 
 .btn img{
     width: 27px;
+    user-select: none;
 }
 
 .btns button{
